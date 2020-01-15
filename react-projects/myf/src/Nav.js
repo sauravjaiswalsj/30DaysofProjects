@@ -4,7 +4,7 @@ const Nav =()=>{
     return(
     <nav>
         <div className = "nav-wrapper container" >
-            <a href = "../public/index.html" className = "brand-logo" > Movie Finder</a>
+            <a href = "../public/index.html" className = "brand-logo" >Movie Finder</a>
         </div> 
     </nav>
     );
