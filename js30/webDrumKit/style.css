@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    color:white;
+}
+
+#button{
+    margin-top:450px ;
+    margin-left: 450px;
+}
+div.col-xs-4{
+    text-decoration-color: blue;
+    text-align: center;
+    text-shadow: white;
+    font-style: normal;
+    font-weight: 100;
+}
