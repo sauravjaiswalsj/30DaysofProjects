@@ -4,13 +4,12 @@ body{
 }
 
 #button{
-    margin-top:450px ;
+    margin-top:250px ;
     margin-left: 450px;
 }
+
 div.col-xs-4{
-    text-decoration-color: blue;
+    margin-top: 100px;
     text-align: center;
-    text-shadow: white;
-    font-style: normal;
-    font-weight: 100;
+    font-weight: 500;
 }
