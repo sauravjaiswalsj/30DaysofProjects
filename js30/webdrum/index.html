@@ -9,15 +9,29 @@
 </head>
 <body>        
     <div class="container">
-        <div class="sub-container">
-            <button class="btn-btn1" id="b1">A</button>
-            <button class="btn-btn2" id="b2">B</button>
-            <button class="btn-btn3" id="b3">C</button>
-            <button class="btn-btn4" id="b4">D</button>
-        </div>
-        <div class="sub-container2">
+         <div class="sub-container">            
+            <div data-key="65" class="key">
+                    <button class="btn-btn1" id="b1">A</button>
+            </div>
+            <div data-key="83" class="key">
+                    <button class="btn-btn2" id="b2">B</button>
+            </div>
+            <div data-key="68" class="key">
+                    <button class="btn-btn3" id="b3">C</button>
+            </div>
+            <div data-key="70" class="key">
+                    <button class="btn-btn4" id="b4">D</button>
+             </div>
+         </div>
+    </div>
+    <div class="sub-container2">
             <span id="ShowText"></span>
-        </div>
+    </div>
+    <div class ="Sounds">
+        <audio data-key="65" src="sounds/clap.wav"></audio>
+        <audio data-key="83" src="sounds/boom.wav"></audio>
+        <audio data-key= "68" src="sounds/hihat.wav"></audio>
+        <audio data-key="70" src="sounds/kick.wav"></audio>
     </div>
 </body>
 <script src="index.js"></script>

@@ -7,6 +7,10 @@ body{
 .container{
     margin: 50px 50px 150px 150px;
 }
+
+.sub-container2{
+    color:white;
+}
 button{
     background-color: transparent;
     padding: 20px;
@@ -14,4 +18,7 @@ button{
     color:white;
     border-radius: 10px;
     cursor: pointer;
+}
+div.key{
+    float: left;
 }
