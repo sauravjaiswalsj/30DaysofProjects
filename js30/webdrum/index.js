@@ -1,4 +1,6 @@
+
 const play = (e) =>{
+    e.currentTime=0; // rewind to start
     e.play();
 }
 window.addEventListener('keydown', (e)=>{
