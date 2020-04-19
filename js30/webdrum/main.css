@@ -53,7 +53,15 @@ canvas {
     border-color: #ffc600;
     box-shadow: 0 0 10px #ffc600;
 }
-.no.t-playing{
-    border-color:none;
-    border-shadow:none ;
+
+#foot{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color:transparent;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(235, 197, 197);
 }

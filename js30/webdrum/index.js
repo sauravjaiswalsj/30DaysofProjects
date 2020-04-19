@@ -16,7 +16,7 @@ const Transition=(e)=>{
     const transition = new Queue();
     transition.enqueue(e.classList.add('playing'));
     setTimeout(()=>{
-        Transition.dequeue(e.classList.remove('playing'));
+        transition.dequeue(e.classList.remove('playing'));
     },10);
 }
 window.addEventListener('keydown', (e)=>{
@@ -81,6 +81,9 @@ class Queue{
             return "Underflow";
         }
         return this.item.pop();
+    }
+    isEmpty(){
+        return this.item.length === 0;
     }
 }
 
