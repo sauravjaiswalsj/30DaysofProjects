@@ -17,7 +17,7 @@ const Transition=(e)=>{
     transition.enqueue(e.classList.add('playing'));
     setTimeout(()=>{
         transition.dequeue(e.classList.remove('playing'));
-    },10);
+    },100);
 }
 window.addEventListener('keydown', (e)=>{
    const key= e.which || e.keyCode;
