@@ -49,3 +49,11 @@ canvas {
 }
 
 
+.playing{
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+.no.t-playing{
+    border-color:none;
+    border-shadow:none ;
+}
