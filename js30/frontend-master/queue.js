@@ -13,11 +13,10 @@ class Queue{
 			return "Underflow";
 		}
 		return this.item.pop();
-	}
-	
+	}	
 }
 
-const pushItem = (e)=>{
+const pushItem = ()=>{
 	const q = new Queue();
 	q.enqueue(10);
 	q.enqueue(20);
