@@ -1,7 +1,13 @@
-.body{
-    margin: 0px;
-    background-color: black;
+body{
+    background-color: azure;
 }
 .container{
-    align-items: center;
+    padding: 150px 150px 0px 150px;
+}
+.clock{
+    position: relative;
+    background-color:lightblue;
+    border-radius: 80%;
+    width: 400px;
+    height: 400px;
 }
