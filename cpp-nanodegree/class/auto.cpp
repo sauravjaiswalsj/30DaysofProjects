@@ -7,4 +7,5 @@ int main(){
 	for(auto i : v){
 		cout<<i<<" ";
 	}
+	return 0;
 }
