@@ -7,5 +7,9 @@ int main(){
 	for(int i: a1){
 		std::cout<<i<<" ";
 	}
+	int a=1;
+	if(a==1){
+		std::cout<<"hello";
+	}
 	return 0;
 }
