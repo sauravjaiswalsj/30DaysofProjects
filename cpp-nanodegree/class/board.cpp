@@ -1,38 +1,55 @@
 #include<iostream>
+#include<string>
+#include<sstream>
 #include<vector>
 #include<fstream>
-using std::ifstream;
-#define fo1 for(int i=0;i<board.size();i++)
-#define fo2 for(int j=0;j<board.size();j++)
-using std::vector;
+
 using std::cout;
+using std::ifstream;
+using std::istringstream;
 using std::string;
-void PrintBoard(vector<vector<int>> board){
-	fo1{
-		fo2{
-			cout<<board[i][j]<<" ";
+using std::vector;
+
+vector<int> ParseLine(string line){
+	istringstream stream(line);
+	int n;
+	char c;
+	vector<int> row;
+	while(stream){
+		stream>>n;
+		stream>>c;
+		if(stream){
+			row.push_back(n);
+		}
+	}
+	return row;
+}
+
+vector<vector<int>> ReadBoardFile(string path){
+	ifstream myfile;
+	myfile.open(path);
+	vector<vector<int>> board;
+	if(myfile){
+		string line;
+		while(getline(myfile,line)){
+			board.push_back(ParseLine(line));
+		}
+	}
+	return board;
+}
+
+void PrintBoard(const vector<vector<int>> board){
+	for(int i=0;i<board.size();i++){
+		for(int j=0;j<board[i].size();j++){
+			cout<<board[i][j];
 		}
 		cout<<"\n";
 	}
 }
-void ReadBoardFile(string file){
-	ifstream myFile;
-	myFile.open(file);
-	std::string line;
-	while(getline(myFile, line)){
-		cout<<line<<"\n";
-	}
-}
-int main(void){
-	vector<vector<int>> board{{0, 1, 0, 0, 0, 0},
-{0, 1, 0, 0, 0, 0},
-{0, 1, 0, 0, 0, 0},
-{0, 1, 0, 0, 0, 0},
-{0, 0, 0, 0, 1, 0}};
-	PrintBoard(board);
-	string file="board.txt";
-	ReadBoardFile(file);
-	return 0;
-}
 
+int main(void){
+	vector<vector<int>> board;
+	board=ReadBoardFile("board.txt");
+	PrintBoard(board);
+}
 
