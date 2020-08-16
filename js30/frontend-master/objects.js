@@ -18,4 +18,5 @@ console.log(who);
 console.log(who.story);
 console.log(who.length);
 
-typeof person === "object" ?console.log("object" ):console.log("Not an array");
+typeof person === "object" ?console.log("object" ):console.log("Not an array");  // Arrays are objects
+
