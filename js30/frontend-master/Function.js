@@ -8,7 +8,11 @@ const CreateSuspectsObjects = (name)=>{
     };
 };
 const suspects = ["Miss Scarlet", "Miss, white", "Mr. Black"];
+let suspectsList=[];
 suspects.forEach(name=>{
+    suspectsList.push(CreateSuspectsObjects(name));
     console.log(CreateSuspectsObjects(name));
     CreateSuspectsObjects(name).speak();
 });
+
+console.log(suspectsList);
