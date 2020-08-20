@@ -13,16 +13,16 @@ _.each=function(list,callback){
             callback(list[i], i, list);
         }
     }
-    // loop through the list
-    // for each item in the list call the callback function
+        // loop through the list
+        // for each item in the list call the callback function
 }
 
 const names={
-    [   {name: "Hello"},
-        {name: "Ram"},
-        { name: "Shayam"}
-    ]
+    name1: "Hello",
+    name2: "Ram",
+    name3: "Shayam"
 };
+
 const list_name=['Hello', 'Ram', 'Shayam'];
 _.each(names, function(name, i, list){
     if(list[i+1]){
