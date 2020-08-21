@@ -20,5 +20,6 @@ const concat = (items)=>{
 }
 const arr= _.map(names,concat);
 arr.forEach(items=>{
-   console.log(items);
+   console.log(items);  
 });
+
