@@ -6,11 +6,19 @@
 // });
 
 const _={};
- _.map = (list,callback)=>{
-    var newArray=[];
-    for(let i=0;i<list.length;i++){
-        
-    }
-    return newArray;
- };
+_.map = (list, concat)=>{
+   let array=[];
+   for(let i=0;i<list.length;i++){
+      array.push(concat(list[i]));
+   }
+   return array;
+}
 
+const names=['Ram', 'Shayam', 'Ghanshyam'];
+const concat = (items)=>{
+   return `Hello, ${items}`;
+}
+const arr= _.map(names,concat);
+arr.forEach(items=>{
+   console.log(items);
+});
