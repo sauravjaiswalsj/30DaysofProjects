@@ -65,3 +65,5 @@ const [color1,color2] = [game .suspect[0].color,game.suspect[1].color]
 
  const [{color: firstColor},  {color: secondColor}] = game.suspect;
  console.log(firstColor + " " + secondColor);
+ const [{name:Fname}]=game.suspect;
+ console.log(Fname);
