@@ -14,21 +14,87 @@
     return storage; 
  }
 
-
- const movie=[{
-     title:'Frontend Master',
-     active:true,
-     course:'Javascript',
-     author:'Bianca Gandolfo',
-     length:40
- },{
-     title:'Coursera',
-     course:'Bash',
-     author:'John Hopkins',
-     length:60
- }];
+ const movie = [
+    {
+        name: 'Miss Scarlet',
+        present: true,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': false},
+            {'billiard room': false},
+            {library: false}
+        ]
+    },
+    {
+        name: 'Mrs. White',
+        present: false,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': false},
+            {'billiard room': false},
+            {library: false}
+        ]
+    },
+    {
+        name: 'Reverend Green',
+        present: true,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': false},
+            {'billiard room': false},
+            {library: false}
+        ]
+    },
+    {
+        name: 'Rusty',
+        present: false,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': false},
+            {'billiard room': false},
+            {library: false}
+        ]
+    },
+    {
+        name: 'Colonel Mustard',
+        present: true,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': false},
+            {'billiard room': false},
+            {library: false}
+        ]
+    },
+    {
+        name: 'Professor Plum',
+        present: true,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': false},
+            {'billiard room': false},
+            {library: false}
+        ]
+    }
+];
+const name=[];
 _.filter(movie, (item)=>{
-    return item.active;
+    return item.present;
     }).forEach(element => {
-        console.log(element);  
+        name.push(element.name) ;
     });
+
+    name.forEach(personName=>{
+        console.log(personName);
+    })
