@@ -67,7 +67,7 @@ class BoardSimulation{
                     return li;
                 } else if ((board[j - 1][i] == board[j][i]) && ((j+1<board.length)&&(board[j + 1][i] == board[j][i]))){
                     s.check=true;
-                    s.value=board[i][j];
+                    s.value=board[j][i];
                     li.add(s);
                     return li;
                 }
