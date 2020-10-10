@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 const username = document.querySelector('#username');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
-const password2=document.querySelector('#password2');
+const confirmPassword=document.querySelector('#password2');
 
 const showError = (input,message) =>{
     const formControl = input.parentElement;
@@ -14,14 +14,17 @@ const showSuccess = (input)=>{
     const formControl=input.parentElement;
     formControl.className = 'form-control success';
 }
+const getFieldByName = (input)=>{
+    return input.id.charAt(0).toUpperCase()+ input.id.slice(1);
+}
 const checkRequired=(inpArr)=>{
     let isRequired=false;
     inpArr.forEach(item=>{
         if(!item.value){
             showError(item, `${getFieldByName(item)} is required`);
-            isRequired=true;
         }else{
             showSuccess(item);
+            isRequired=true;
         }
         return isRequired;
     });
@@ -45,24 +48,21 @@ const checkEmail =(input)=>{
       showError(input, 'Email is not valid');
     }
 };
-const getFieldByName = (input)=>{
-    return input.id.charAt(0).toUpperCase()+ input.id.slice(1);
-}
+
 const checkPasswordsMatch = (p1,p2)=>{
-        if(p1.value===p2.value){
-            showSuccess(p1);
-        }else{
-            showError(p2, 'Password is does not match');
+        if(p1.value!==p2.value){
+            showError(p2, 'Password do not match');
         }
 }
 // Event Listener
 form.addEventListener('submit', (e)=>{
         e.preventDefault();
-        if(!checkRequired([username,email,password,password2])){
+        //console.log(password.value);
+        if(!checkRequired([username, email, password,confirmPassword])){
             checkLength(username, 3, 15);
-            checkLength(password, 6, 25);
             checkEmail(email);
-            checkPasswordsMatch(password, password2);
+            checkLength(password, 6, 25);
+            checkPasswordsMatch(password, confirmPassword);
         }
 
 });
