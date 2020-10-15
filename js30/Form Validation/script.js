@@ -3,7 +3,6 @@ const username = document.querySelector('#username');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const confirmPassword=document.querySelector('#password2');
-
 const showError = (input,message) =>{
     const formControl = input.parentElement;
     formControl.className = 'form-control error';
@@ -54,6 +53,12 @@ const checkPasswordsMatch = (p1,p2)=>{
             showError(p2, 'Password do not match');
         }
 }
+const saveFormData = (data)=>{
+    data.forEach(element=>{
+        localStorage.setItem(`${element.id}`,element.value);
+    });
+}
+
 // Event Listener
 form.addEventListener('submit', (e)=>{
         e.preventDefault();
@@ -63,7 +68,7 @@ form.addEventListener('submit', (e)=>{
             checkEmail(email);
             checkLength(password, 6, 25);
             checkPasswordsMatch(password, confirmPassword);
+            saveFormData([username,email,password,confirmPassword]);
         }
 
 });
-
