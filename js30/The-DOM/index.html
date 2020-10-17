@@ -8,15 +8,20 @@
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">DOM manipulations</h1>
-          <p class="lead">This is a simple DOM manipulations Todo project</p>
+      <div class="container-fluid" >
+        <div class="row">
+          <h1 class="display-4" >DOM manipulations</h1>
+          <p class="lead" >This is a simple DOM manipulations Todo project</p>
+          <div class="col-md-4 col-md-3 ml-md-auto">
+            <input type="text" class="form-control" id="filter" placeholder="Search Items">
+          </div>
+        </div>
         </div>
       </div>
     <div class="container">
         <div id="main" class="card card-body">
             <h2 class="title">Add Items</h2><br>
-            <form class="form-inline">
+            <form class="form-inline" id="add-form">
                 <div class="form-row align-items-center">
                   <div class="col mr-md-3">
                     <label class="sr-only" for="inlineFormInputGroup">Add Items</label>
@@ -35,12 +40,12 @@
               <br>
               <h2 class="title">Items</h2>
               <ul class="list-group" id="items">
-                  <li class="list-group-item">Item 1</li>
-                  <li class="list-group-item">Item 1</li>
-                  <li class="list-group-item">Item 1</li>
+                  <li class="list-group-item">Item 1 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+                  <li class="list-group-item">Item 1 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+                  <li class="list-group-item">Item 1 <button class="btn btn-sm btn-danger float-right delete">X</button></li>
               </ul>
         </div>
     </div>
 </body>
-<script src="dom.js"></script>
+<script src="todo.js"></script>
 </html>
