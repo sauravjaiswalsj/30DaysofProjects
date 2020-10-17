@@ -13,7 +13,7 @@ body{
 }
 .hour-container{
     border-bottom: 5px solid black;
-    width:  50px;
+    width:  50px;    
     position: absolute;
     left: 50%;
     margin-left: -4px;
