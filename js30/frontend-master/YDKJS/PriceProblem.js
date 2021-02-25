@@ -1,4 +1,5 @@
-let price = 500;
+let price = 500; 
+//prompt('Enter the Balance Amount'); in js
 let phonePrice =0;
 console.log(`Available balance: ${price}`);
 
@@ -14,5 +15,11 @@ const getPrice = (price)=>{
     }
     return [phonePrice,noOfPhone];
 }
+const getPriceAfterTax = (amount)=>{
+    let taxPercent =18;
+    return amount-(0.18*amount);
+}
 const [amount, phone] = getPrice(price);
+const finalPrice = getPriceAfterTax(amount);
 console.log(`Amount of Phone: ${amount} and No of Phone can be bought: ${phone}`);
+console.log(`Price after tax\n${finalPrice}`);
