@@ -1,0 +1,21 @@
+{
+  "name": "miniurl",
+  "version": "1.0.0",
+  "description": "A url shortner engine",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "url",
+    "url",
+    "shortner",
+    "miniurl"
+  ],
+  "author": "Saurav Jaiswal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
