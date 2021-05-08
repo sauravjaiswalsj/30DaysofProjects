@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React from Scratch</title>
+</head>
+<body>
+    <div id="root">Not rendered</div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script>
+        // Basically, here we created a component and componet in this particular function is App
+        const App= ()=>{
+            return React.createElement(
+                // Create element creates a div and Create another h1 within div
+                "div",  // => What kind of element is this! This is a div
+//empty  object                {}, // => what kind of Attribute it takes as params
+                React.createElement("h1",{},"Hello World")
+            );
+        };
+        ReactDOM.render(
+            React.createElement(App),
+            document.getElementById('root')
+        );
+    </script>
+</body>
+</html>

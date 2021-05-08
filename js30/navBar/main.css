@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/** variables*/
+:root{
+    --clr-white: #ffffff;
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+nav{
+    background-color: #ffffff;
+    box-shadow:10px 12px 15px  rgba(48, 44, 44, 0.2);
+    display: flex;
+}
+.header h1{
+    font-family: 'Anton', sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline;
+}
